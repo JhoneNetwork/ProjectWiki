@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function z(){
+ document.getElementById('Testo01').innerHTML="Zézinho";
+}
+function zx(){
+    
+    document.body.style.backgroundColor="black";
+    document.body.style.color="white";
+    
+}
+function lx(){
+    
+    document.body.style.backgroundColor="white";
+    document.body.style.color="black";
+    
+}
+</script>
+</head>
+<body>
+    <button type="button" onclick="zx()">Bureco!</button>
+    <button type="button" onclick="lx()">Whito!</button>
+<h2>Vamos alterar o estilo de uma pagina com uma ação</h2>
+
+<p>vamos mudar os atributos de nossa pagina.</p>
+
+<p>Con o nosso javascript vamos  mudar os valores do atributo src para trocar o link da imagem.</p>
+
+<button type="button" onclick="document.getElementById('imagem01').src='https://thumbs.gfycat.com/BeneficialImprobableAgouti-max-1mb.gif'">botão de ligar</button>
+
+<img id="imagem01" src="https://thumbs.gfycat.com/BeneficialImprobableAgouti-max-1mb.gif" style="width:400px">
+
+<button type="button" onclick="document.getElementById('imagem01').src='https://media.tenor.com/C1imUCEpiFgAAAAM/grand-blue-hide.gif'">botão de desligar </button>
+<br>
+<hr>
+<h2 Id="testo">O que podemos fazer mais?</h2>
+<button type="button" onclick="document.getElementById('testo').style.display='none'">Desapareça!</button>
+<button type="button" onclick="document.getElementById('testo').style.display=''">Obedeça o chamado</button>
+<hr>
+
+<p id="teste01">Vamos acresentar conteudo aqui.</p>
+<button type="button" onclick="document.getElementById('teste01').innerHTML='Paparararapa Pi papaparopo' "> magical</button>
+<button type="button" onclick="document.getElementById('teste01').style.fontSize='85px'">Hora de Morfar</button>
+<button type="button" onclick="document.getElementById('teste01').style.color='red'">Vermelho</button>
+<hr>
+<audio controls> 
+    <source src="Audio/Daybreack.mp3" type="audio/mpeg"> 
+</audio>
+<br>
+<p id="Testo01">Nome de uma pessoa ingênua</p>
+<button type="button" onclick="z()">Descubra</button>
+<hr>
+<p id="Leto">Multiplicação de dois números</p>
+<script>
+const a = 5;
+const L = 4;
+let total = a * L;
+document.getElementById('Leto').innerHTML= "O resusltado da multiplicação é: " + total;
+</script>
+
+<hr>
+<br>
+<p>Pescoco Fino</p>
+<p id="zu"></p>
+<script>
+const n = 45.68;
+let nome ="José Fino"; 
+let fraseDoDia = 'Aaaaah?';
+document.getElementById('zu').innerHTML = n + "<br>" + nome +"<br>" + fraseDoDia;
+
+
+</script>
+<hr>
+
+
+
+<h2>Utilizando Constantess</h2>
+<p>Declarar uma matriz constante Não torna os elementos imutáveis</p>
+<p id="zeto"></p>
+<script>
+//Criando nosso array:
+const nomes = ["Zézinho","Lézinho","Luizinho"];
+
+//Mudando elemento
+nomes[0] = "Patrícia";
+
+//Adicionando elemento
+nomes.push("Leticia");
+
+//exibindo dados:
+document.getElementById('zeto').innerHTML = nomes;
+</script>
+
+
+
+<br>
+<hr>
+<h2>trabalhando Com funções</h2>
+<p>Nossa saída na tela de função</p>
+<p id="Texte"></p>
+<p id="Texte01"></p>
+<script>
+minhaFuncao01();
+function minhaFuncao01(){
+let nomeCompleto = "Diógenes Liógenes Jinógeses";
+document.getElementById("Texte").innerHTML = typeof nomeCompleto + " " + nomeCompleto;
+}
+document.getElementById("Texte01").innerHTML = typeof nomeCompleto;
+
+</script>
+<br>
+<hr>
+<h2>trabalahndo com Objetos</h2>
+<p id="Jeto"></p>
+<script>
+// Criando nosso objeto:
+const cadeira ={tipo:"Madeira",modelo:"Retro", cor:"Marron"};
+//Exibindo nosso objeto:
+document.getElementById("Jeto").innerHTML = "Nossa cadeira é do tipo: " + cadeira.tipo + ", Modelo: " + cadeira.modelo;
+
+</script>
+<hr>
+<h2>javaScript Scope</h2>
+<p>Uma variável Global pode ser acessada de qualquer script ou função.</p>
+<p id="Carroteste"></p>
+<script>
+var carro = "Fusca";
+MinhaFuncao();
+function MinhaFuncao(){
+    document.getElementById("Carroteste").innerHTML = "A vaga está reservada para:  " + carro;
+}
+
+</script>
+<hr>
+
+<p id="he"></p>
+<script>
+
+    var x = 10;{
+        var x = 2;
+    }
+document.getElementById("he").innerHTML = x;
+
+</script>
+<br>
+<hr>
+
+<p id="zcb"></p>
+<form>
+Nome: <input type="text" id="txtnome"/><br/>
+Telefone: <input type="text" id="txttelefone"/><br/>
+Email: <input type="text" id="txtemail"/><br/>
+<input type="submit" onclick="enviar()" value="enviar"/> 
+</form>
+<script>
+enviar();
+function enviar(){
+var nome2 = document.getElementById("txtnome");
+var telefone2 = document.getElementById("txttelefone");
+var email2 = document.getElementById("txtemail");
+var texto = nome2 + telefone2 + email2;
+return texto;
+
+ 
+}
+document.getElementById("zcb").innerHTML = nome2;
+</script>
+
+
+</body>
+</html>
+
+
+
